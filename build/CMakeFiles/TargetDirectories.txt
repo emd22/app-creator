@@ -1,0 +1,3 @@
+/home/ethan/Desktop/app-creator/build/CMakeFiles/edit_cache.dir
+/home/ethan/Desktop/app-creator/build/CMakeFiles/rebuild_cache.dir
+/home/ethan/Desktop/app-creator/build/CMakeFiles/cpl.dir
