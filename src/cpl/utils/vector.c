@@ -107,7 +107,7 @@ void vector_remove(vector_t *vec, int index) {
 void vector_free_items(vector_t *vec) {
     int i;
     for (i = 0; i < vec->used; i++) {
-        free(vector_get(&vec, i));
+        free(vector_get(vec, i));
     }
 }
 
@@ -141,7 +141,7 @@ void vector_free(vector_t *vec, unsigned char free_data) {
       //finally, free the vector.
       vector_free(&your_vector, 0);
 
-      freeing the object with vector_free() shall only be used for things such as:
+      freeing the object with vector_free() shall only be used for structures such as:
 
       typedef struct {
         int num1;
@@ -155,7 +155,7 @@ void vector_free(vector_t *vec, unsigned char free_data) {
         return;
     }
     if (free_data) {
-        vector_free_items(&vec);
+        vector_free_items(vec);
     }
 
     free(vec->items);

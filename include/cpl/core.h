@@ -1,12 +1,7 @@
-#ifndef GTK_WINDOW_H
-#define GTK_WINDOW_H
+#ifndef CORE_H
+#define CORE_H
 
-#include <gtk/gtk.h>
-
-typedef struct {
-    char *title;
-    GtkWidget *window;
-} window_t;
+#include <window.h>
 
 void init(int argc, char **argv);
 void destroy(void);

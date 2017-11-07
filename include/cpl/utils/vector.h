@@ -21,8 +21,8 @@ void vector_resize(vector_t *vec, int sz);
 void vector_add(vector_t *vec, void *item);
 void vector_set(vector_t *vec, int index, void *item);
 void *vector_get(vector_t *vec, int index);
-unsigned char vector_cat(vector_t *vec1, vector_t *vec2);
+unsigned char vector_cat(vector_t *dest, vector_t *vec);
 void vector_remove(vector_t *vec, int index);
-void vector_free(vector_t *vec);
+void vector_free(vector_t *vec, unsigned char free_data);
 
 #endif
