@@ -5,7 +5,7 @@
 #include <gtk/gtk.h>
 
 typedef struct {
-    //vector_t *widgets;
+    vector_t *widgets;
     char *title;
     GtkWidget *window;
 } window_t;

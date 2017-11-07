@@ -31,10 +31,8 @@ void destroy(void) {
     window_t *window;
     for (i = 0; i < windows.used; i++)  {
         window = vector_get(&windows, i);
-        printf("hitting window: %s\n\n", window->title);
         free(window->title);
-        free(window->window);
-        //widget_free(window);
+        widget_free(window);
     }
     vector_free(&windows, 0);
 }
@@ -51,7 +49,7 @@ void window_new(const char *title) {
     g_signal_connect(window->window, "delete_event", G_CALLBACK(delete_event), NULL);
     g_signal_connect(window->window, "destroy", G_CALLBACK(destroy_all), NULL);
     vector_add(&windows, window);
-    //widget_init(window);
+    widget_init(window);
 }
 
 window_t *window_get(int index) {
@@ -86,7 +84,7 @@ void windows_draw() {
 
 }
 
-void window_run(void) {
+void core_main(void) {
     GtkWidget *window;
     GtkWidget *button;
 

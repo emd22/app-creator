@@ -20,11 +20,12 @@ typedef struct {
     GtkWidget *widget;
 } widget_t;
 
-void widget_init(window_t *window);
-void widget_add(window_t *window, int type);
-void widget_free(window_t *window);
+void widgets_init(window_t *window);
+void widgets_add(window_t *window, int type);
+void widgets_free(window_t *window);
+void widgets_draw(window_t *window);
 
-//widget modifiers(takes widget_t not vector_t)
-void widget_move(window_t *window, int index, int x, int y);
+//widget modifiers
+void widget_move(widget_t *widget, int x, int y);
 
 #endif
