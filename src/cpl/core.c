@@ -32,7 +32,7 @@ void destroy(void) {
     for (i = 0; i < windows.used; i++)  {
         window = vector_get(&windows, i);
         free(window->title);
-        widget_free(window);
+        widgets_free(window);
     }
     vector_free(&windows, 0);
 }
@@ -49,7 +49,7 @@ void window_new(const char *title) {
     g_signal_connect(window->window, "delete_event", G_CALLBACK(delete_event), NULL);
     g_signal_connect(window->window, "destroy", G_CALLBACK(destroy_all), NULL);
     vector_add(&windows, window);
-    widget_init(window);
+    widgets_init(window);
 }
 
 window_t *window_get(int index) {

@@ -21,7 +21,7 @@ typedef struct {
 } widget_t;
 
 void widgets_init(window_t *window);
-void widgets_add(window_t *window, int type);
+int widgets_add(window_t *window, int type);
 void widgets_free(window_t *window);
 void widgets_draw(window_t *window);
 

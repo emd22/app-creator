@@ -4,6 +4,6 @@
 #include <gtk/gtk.h>
 #include <window.h>
 
-void button(window_t *window, char *text, GCallBack cb);
+GtkWidget *button(window_t *window, char *text, GCallback cb);
 
 #endif
